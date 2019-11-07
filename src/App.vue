@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <CenterLayout>
+      <LeftLayout></LeftLayout>
+      <RightLayout></RightLayout>
+    </CenterLayout>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CenterLayout from "./components/CenterLayout.vue";
+import LeftLayout from "./components/LeftLayout.vue";
+import RightLayout from "./components/RightLayout.vue";
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    LeftLayout,
+    CenterLayout,
+    RightLayout
   }
 }
 </script>
