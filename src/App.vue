@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <CenterLayout>
-      <LeftLayout></LeftLayout>
-      <RightLayout></RightLayout>
+      <LeftLayout id="left-layout"></LeftLayout>
+      <RightLayout id="right-layout"></RightLayout>
     </CenterLayout>
   </div>
 </template>
@@ -23,6 +23,44 @@ export default {
 </script>
 
 <style>
+
+  @keyframes fadeInLeft{
+    0%{
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      opacity: 0;
+    }
+    80%{
+      transform: translateX(50%);
+      -webkit-transform: translateX(0%);
+      opacity: .8;
+    }
+    100%{
+      transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes fadeInRight{
+    0%{
+      transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      opacity: 0;
+    }
+    80%{
+      transform: translateX(50%);
+      -webkit-transform: translateX(0%);
+      opacity: .8;
+    }
+    100%{
+      transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -31,4 +69,14 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+#left-layout{
+  -webkit-animation: fadeInLeft 1s;
+  animation: fadeInLeft 1s;
+}
+#right-layout{
+  -webkit-animation: fadeInRight 1s;
+  animation: fadeInRight 1s;
+}
+
 </style>

@@ -35,9 +35,13 @@
         padding: 10px 15px;
         display: inline-block;
         height: 50px;
+        outline: none;
         border-radius: 5px;
         box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.12);
         margin: 10px;
+    }
+    .icon-button:active{
+        outline: none;
     }
     .icon-button img{
         display: inline-block;
